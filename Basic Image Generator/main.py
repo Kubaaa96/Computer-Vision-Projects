@@ -10,14 +10,14 @@ import torchvision.utils as vutils
 from torch.autograd import Variable
 
 # Hyperparameters
-batchSize = 64 
-imageSize = 64 
+batch_size = 64 
+image_size = 64 
 
 # Data Preparation
-transform = transforms.Compose([transforms.Scale(imageSize), transforms.ToTensor(), transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5)),]) 
+transform = transforms.Compose([transforms.Scale(image_size), transforms.ToTensor(), transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5)),]) 
 
-dataset = dset.CIFAR10(root = './data', download = True, transform = transform) 
-dataloader = torch.utils.data.DataLoader(dataset, batch_size = batchSize, shuffle = True, num_workers = 0) 
+data_set = dset.CIFAR10(root = './data', download = True, transform = transform) 
+data_loader = torch.utils.data.DataLoader(data_set, batch_size = batch_size, shuffle = True, num_workers = 0) 
 
 
 def weights_init(m):
@@ -37,15 +37,19 @@ class G(nn.Module):
             nn.ConvTranspose2d(100, 512, 4, 1, 0, bias = False),
             nn.BatchNorm2d(512),
             nn.ReLU(True),
+			
             nn.ConvTranspose2d(512, 256, 4, 2, 1, bias = False),
             nn.BatchNorm2d(256),
             nn.ReLU(True),
+			
             nn.ConvTranspose2d(256, 128, 4, 2, 1, bias = False),
             nn.BatchNorm2d(128),
             nn.ReLU(True),
+			
             nn.ConvTranspose2d(128, 64, 4, 2, 1, bias = False),
             nn.BatchNorm2d(64),
             nn.ReLU(True),
+			
             nn.ConvTranspose2d(64, 3, 4, 2, 1, bias = False),
             nn.Tanh()
         )
@@ -65,15 +69,19 @@ class D(nn.Module):
         self.main = nn.Sequential(
             nn.Conv2d(3, 64, 4, 2, 1, bias = False),
             nn.LeakyReLU(0.2, inplace = True),
+			
             nn.Conv2d(64, 128, 4, 2, 1, bias = False),
             nn.BatchNorm2d(128),
             nn.LeakyReLU(0.2, inplace = True),
+			
             nn.Conv2d(128, 256, 4, 2, 1, bias = False),
             nn.BatchNorm2d(256),
             nn.LeakyReLU(0.2, inplace = True),
+			
             nn.Conv2d(256, 512, 4, 2, 1, bias = False),
             nn.BatchNorm2d(512),
             nn.LeakyReLU(0.2, inplace = True),
+			
             nn.Conv2d(512, 1, 4, 1, 0, bias = False),
             nn.Sigmoid()
         )
@@ -91,7 +99,7 @@ optimizerG = optim.Adam(netG.parameters(), lr = 0.0002, betas = (0.5, 0.999))
 
 for epoch in range(25):
 
-    for i, data in enumerate(dataloader, 0):
+    for i, data in enumerate(data_loader, 0):
         
         # Updating the weights of the neural network of the discriminator
 
@@ -125,7 +133,7 @@ for epoch in range(25):
         errG.backward()
         optimizerG.step()
         
-        print('[%d/%d][%d/%d] Loss_D: %.4f Loss_G: %.4f' % (epoch, 25, i, len(dataloader), errD.item(), errG.item()))
+        print('[%d/%d][%d/%d] Loss_D: %.4f Loss_G: %.4f' % (epoch, 25, i, len(data_loader), errD.item(), errG.item()))
         if i % 100 == 0:
             vutils.save_image(real, '%s/real_samples.png' % "./results", normalize = True)
             fake = netG(noise)
