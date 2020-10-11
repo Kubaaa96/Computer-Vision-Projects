@@ -23,3 +23,44 @@ data_loader = torch.utils.data.DataLoader(data_set,
                                           batch_size=batch_size, 
                                           shuffle = True, 
                                           num_workers=2)
+
+# Weights initialization takes as input neural network m
+def weights_init(m):
+    class_name = m.__class__.__name__
+    if class_name.find('Conv') != -1:
+        m.weight.data.normal_(0.0, 0.02)
+    elif class_name.find('BatchNorm') != -1:
+        m.weight.data.normal_(1.0, 0.02)
+        m.bias.data.fill_(0)
+
+# generator
+class G(nn.Module):
+    def __init__(self):
+        super(G, self).__init__()
+        self.main = nn.Sequential(
+            nn.ConvTranspose2d(100, 512, 4, 1, 0, bias=False),
+            nn.BatchNorm2d(512),
+            nn.ReLU(True),
+
+            nn.ConvTranspose2d(512, 256, 4, 1, 0, bias=False),
+            nn.BatchNorm2d(256),
+            nn.ReLU(True),
+
+            nn.ConvTranspose2d(256, 128, 4, 1, 0, bias=False),
+            nn.BatchNorm2d(512),
+            nn.ReLU(True),
+
+            nn.ConvTranspose2d(128, 64, 4, 1, 0, bias=False),
+            nn.BatchNorm2d(64),
+            nn.ReLU(True),
+
+            nn.ConvTranspose2d(64, 3, 4, 2, 1, bias=False),
+            nn.Tanh()
+        )
+
+    def forward(self, input):
+        output = self.main(input)
+        return output
+
+netG = G() # Creating Generator object
+netG.apply(weights_init)
