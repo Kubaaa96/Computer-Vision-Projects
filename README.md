@@ -41,3 +41,9 @@ Small Project when i used basic CNN to distinguish between cats and dogs
 More info can be found in notebook file 
 </p>
 </details>
+
+<details><summary>Object Localization Project Jupyter Notebook</summary>
+<p>
+Project using Transfer learning with  <a gref="https://arxiv.org/abs/1505.06798">VGG 16</a> network trained on ImageNet data set to accomplish basic Pokemon detection on images. 
+</p>
+</details>
