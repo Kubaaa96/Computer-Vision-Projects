@@ -52,3 +52,9 @@ Project using Transfer learning with  <a gref="https://arxiv.org/abs/1505.06798"
 <img src="https://raw.githubusercontent.com/Kubaaa96/Computer-Vision-Projects/master/Object%20Localization%20Project/results/result4.JPG" alt="Result 4" width="250" height="250"><p>
 </p>
 </details>
+
+<details><summary>Style Transfer Jupyter Notebook</summary>
+<p>
+Small project based on <a gref="https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Gatys_Image_Style_Transfer_CVPR_2016_paper.pdf">Image Style Transfer Using Convolutional Neural Networks</a> paper. 
+</p>
+</details>
