@@ -56,5 +56,9 @@ Project using Transfer learning with  <a gref="https://arxiv.org/abs/1505.06798"
 <details><summary>Style Transfer Jupyter Notebook</summary>
 <p>
 Small project based on <a gref="https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Gatys_Image_Style_Transfer_CVPR_2016_paper.pdf">Image Style Transfer Using Convolutional Neural Networks</a> paper. 
+<p>
+<img src="https://raw.githubusercontent.com/Kubaaa96/Computer-Vision-Projects/master/Style%20Transfer/results/styleTransfer.JPG" alt="Style Transfer" width ="600" height="">
+
+<img src="https://raw.githubusercontent.com/Kubaaa96/Computer-Vision-Projects/master/Style%20Transfer/results/output.gif" alt="Style Transfer Gif" width="600" height="400">
 </p>
 </details>
