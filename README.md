@@ -4,7 +4,7 @@ In this repository i will be collecting most of my computer vision projects
 
 <details><summary>Basic Image Generator Python</summary>
 <p>
-Basic image generator using GAN network and CIFAR-10 dataset.
+Basic image generator using  <a href="https://github.com/Kubaaa96/Computer-Vision-Projects/blob/master/Basic%20Image%20Generator/main.py">GAN network</a> and CIFAR-10 dataset.
 <p>
 <figure>
     <img src="https://raw.githubusercontent.com/Kubaaa96/Computer-Vision-Projects/master/Basic%20Image%20Generator/results/real_samples.png" alt="Real" width="250" height="250">
@@ -38,13 +38,13 @@ Small Project when i used basic CNN to distinguish between cats and dogs
 
 <a href="https://drive.google.com/drive/folders/1R1eyz1Ddh6jwDFsByN-JhHc7NM7fIGEr?usp=sharing">DATA SET</a>
 
-More info can be found in notebook file 
+More info can be found in <a href="https://github.com/Kubaaa96/Computer-Vision-Projects/blob/master/Dog%20Cat%20image%20recognition/main.ipynb">notebook file</a>
 </p>
 </details>
 
 <details><summary>Object Localization Project Jupyter Notebook</summary>
 <p>
-Project using Transfer learning with  <a gref="https://arxiv.org/abs/1505.06798">VGG 16</a> network trained on ImageNet data set to accomplish basic Pokemon detection on images and drawing rectangles around them.
+Project using Transfer learning with  <a gref="https://arxiv.org/abs/1505.06798">VGG 16</a> <a href="https://github.com/Kubaaa96/Computer-Vision-Projects/blob/master/Object%20Localization%20Project/Object%20Detection.ipynb">network trained</a> on ImageNet data set to accomplish basic Pokemon detection on images and drawing rectangles around them.
 
 <img src="https://raw.githubusercontent.com/Kubaaa96/Computer-Vision-Projects/master/Object%20Localization%20Project/results/result1.JPG" alt="result 1" width="250" height="250"><p>
 <img src="https://raw.githubusercontent.com/Kubaaa96/Computer-Vision-Projects/master/Object%20Localization%20Project/results/result2.JPG" alt="Result 2" width="250" height="250"><p>

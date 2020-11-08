@@ -20,6 +20,7 @@
     <figcaption>After 24th epoch</figcaption>
 </figure>
 <p>
+
 [Data set](http://www.cs.toronto.edu/~kriz/cifar.html)
 
 torchvision == 0.1.9 needed 
