@@ -23,4 +23,4 @@
 
 [Data set](http://www.cs.toronto.edu/~kriz/cifar.html)
 
-torchvision == 0.1.9 needed 
+torchvision == 0.1.9 Suggested 
