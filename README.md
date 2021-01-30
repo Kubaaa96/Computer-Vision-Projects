@@ -65,5 +65,10 @@ Small project based on <a gref="https://www.cv-foundation.org/openaccess/content
 
 <details><summary>Full body segmentation</summary>
 Project for Full body segmentation using <a gref="visal.cs.cityu.edu.hk/research/mads/")>MADS Dataset</a> and with use of <a gref=https://arxiv.org/abs/1505.04597)>UNet</a>.
+
+<img src="https://raw.githubusercontent.com/Kubaaa96/Computer-Vision-Projects/master/Segmentation%20Full%20Body/results/original.png" alt="original" width="250" height="250"><p>
+<img src="https://raw.githubusercontent.com/Kubaaa96/Computer-Vision-Projects/master/Segmentation%20Full%20Body/results/originalMask.png" alt="Mask" width="250" height="250"><p>
+<img src="https://raw.githubusercontent.com/Kubaaa96/Computer-Vision-Projects/master/Segmentation%20Full%20Body/results/prediction.png" alt="Prediction" width="250" height="250"><p>
+
 </details>
 
