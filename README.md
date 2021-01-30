@@ -62,3 +62,8 @@ Small project based on <a gref="https://www.cv-foundation.org/openaccess/content
 <img src="https://raw.githubusercontent.com/Kubaaa96/Computer-Vision-Projects/master/Style%20Transfer/results/output.gif" alt="Style Transfer Gif" width="600" height="400">
 </p>
 </details>
+
+<details><summary>Full body segmentation</summary>
+Project for Full body segmentation using <a gref="visal.cs.cityu.edu.hk/research/mads/")>MADS Dataset</a> and with use of <a gref=https://arxiv.org/abs/1505.04597)>UNet</a>.
+</details>
+
